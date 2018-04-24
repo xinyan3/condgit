@@ -27,7 +27,28 @@ step5 git 版本回退控制 git log 显示所有版本信息 --pretty=oneline�
 
     要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。
 
+github关联
 
+创建sshkey $ ssh-keygen -t rsa -C "youremail@example.com"
+如果一切顺利的话，可以在用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。
+
+第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：
+
+然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容：
+
+
+
+现在的情景是，你已经在本地创建了一个Git仓库后，又想在GitHub创建一个Git仓库，并且让这两个仓库进行远程同步，这样，GitHub上的仓库既可以作为备份，又可以让其他人通过该仓库来协作，真是一举多得。
+
+首先，登陆GitHub，然后，在右上角找到“Create a new repo”按钮，创建一个新的仓库：
+
+名称最好很本地仓库根目录名称一样
+
+git remote add origin git@github.com:xinyan3/condgit.git
+然后绑定本地与远程仓库
+git push -u origin master
+最后push同步
+以后只要 git push origin master
 
 		       
 
