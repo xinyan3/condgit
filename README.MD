@@ -70,7 +70,9 @@ Git鼓励大量使用分支：
 
 测试测试23333
 
-
+自动化shell同步测试：命令一 git commit -am'标签'
+		    命令二 git push origin master
+			   用户名/密码
 
 
 		       
