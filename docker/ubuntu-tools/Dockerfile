@@ -61,5 +61,3 @@ RUN chmod a+x /entrypoint.sh
 
 ENTRYPOINT ["/usr/local/bin/dumb-init", "/entrypoint.sh"]
 
-
-
