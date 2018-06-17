@@ -1,5 +1,0 @@
-wget -q http://www-eu.apache.org/dist/maven/maven-3/${MAVEN_VERSION}/bin 
-mkdir /opt/maven && \           
-tar xzf apache-maven-${MAVEN_VERSION}-bin.tar.gz -C /opt/maven && \
-rm apache-maven-${MAVEN_VERSION}-bin.tar.gz 
-ln -s /opt/maven/apache-maven-${MAVEN_VERSION}/bin/mvn /usr/local/bin/mv

@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y ca-certificates
 # https://github.com/Yelp/dumb-init
 RUN curl -fLsS -o /usr/local/bin/dumb-init https://github.com/Yelp/dumb-init/releases/download/v1.0.2/dumb-init_1.0.2_amd64 && chmod +x /usr/local/bin/dumb-init
 
-ENV MAVEN_VERSION=3.5.2
+ENV MAVEN_VERSION=3.5.3
 
 # Install Maven
 RUN wget -q http://www-eu.apache.org/dist/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz && \
