@@ -1,5 +1,5 @@
 FROM ubuntu:xenial
-MAINTAINER Sky Cheng <sky831202@gmail.comcom>
+#MAINTAINER Sky Cheng <sky831202@gmail.comcom>
 
 
 RUN sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y ca-certificates
 # https://github.com/Yelp/dumb-init
 RUN curl -fLsS -o /usr/local/bin/dumb-init https://github.com/Yelp/dumb-init/releases/download/v1.0.2/dumb-init_1.0.2_amd64 && chmod +x /usr/local/bin/dumb-init
 
-ENV MAVEN_VERSION=3.5.2
+ENV MAVEN_VERSION=3.5.3
 
 # Install Maven
 RUN wget -q http://www-eu.apache.org/dist/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz && \
@@ -19,7 +19,7 @@ RUN wget -q http://www-eu.apache.org/dist/maven/maven-3/${MAVEN_VERSION}/binarie
     rm apache-maven-${MAVEN_VERSION}-bin.tar.gz && \
     ln -s /opt/maven/apache-maven-${MAVEN_VERSION}/bin/mvn /usr/local/bin/mvn
 
-ENV TOMCAT_VERSION=8.5.30
+ENV TOMCAT_VERSION=8.5.31
 RUN wget -q http://mirrors.shu.edu.cn/apache/tomcat/tomcat-8/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz &&\
     mkdir /opt/tomcat8 && \
     tar xzf apache-tomcat-${TOMCAT_VERSION}.tar.gz -C /opt/tomcat8 && \
